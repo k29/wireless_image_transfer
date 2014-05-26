@@ -54,7 +54,7 @@ void client::getImage()
     QTimer *timer=new QTimer(this);
     qDebug()<<"callign timer";
     connect(timer,SIGNAL(timeout()),this,SLOT(update()));
-    timer->start(1000);
+    timer->start(100);
     qDebug()<<"called timer";
 
 }
