@@ -51,6 +51,18 @@ void client::disconnected()
 
 void client::getImage()
 {
+    QTimer *timer=new QTimer(this);
+    qDebug()<<"callign timer";
+    connect(timer,SIGNAL(timeout()),this,SLOT(update()));
+    timer->start(1000);
+    qDebug()<<"called timer";
+
+}
+
+void client::update()
+{
+    dataSize=0;
+    qDebug()<<"in update!!";
     socket->write("i\n\0");
     socket->flush();
 }
@@ -90,7 +102,7 @@ void client::bytesWritten(qint64 bytes)
 
 void client::readyRead()
 {
-    dataSize=0;
+
 
     qDebug()<<"in tcp ready, readyread signal emmitted!! and datasize is "<<dataSize;
     if(dataSize==0)

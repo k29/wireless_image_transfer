@@ -37,7 +37,7 @@ public:
     QPushButton *pushButtonRight;
     QPushButton *pushButtonDown;
     QPushButton *pushButtonGetImage_3;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QLineEdit *lineEdit;
     QHBoxLayout *horizontalLayout;
@@ -79,15 +79,15 @@ public:
         pushButtonGetImage_3 = new QPushButton(centralWidget);
         pushButtonGetImage_3->setObjectName(QString::fromUtf8("pushButtonGetImage_3"));
         pushButtonGetImage_3->setGeometry(QRect(80, 140, 85, 31));
-        widget = new QWidget(centralWidget);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(10, 10, 187, 74));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(centralWidget);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(10, 10, 187, 74));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        lineEdit = new QLineEdit(widget);
+        lineEdit = new QLineEdit(layoutWidget);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
 
         verticalLayout->addWidget(lineEdit);
@@ -95,12 +95,12 @@ public:
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(6);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        pushButtonGetImage = new QPushButton(widget);
+        pushButtonGetImage = new QPushButton(layoutWidget);
         pushButtonGetImage->setObjectName(QString::fromUtf8("pushButtonGetImage"));
 
         horizontalLayout->addWidget(pushButtonGetImage);
 
-        pushButtonGetImage_2 = new QPushButton(widget);
+        pushButtonGetImage_2 = new QPushButton(layoutWidget);
         pushButtonGetImage_2->setObjectName(QString::fromUtf8("pushButtonGetImage_2"));
 
         horizontalLayout->addWidget(pushButtonGetImage_2);
@@ -136,10 +136,10 @@ public:
     {
         client->setWindowTitle(QApplication::translate("client", "client", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("client", "TextLabel", 0, QApplication::UnicodeUTF8));
-        pushButtonUp->setText(QApplication::translate("client", "PushButton", 0, QApplication::UnicodeUTF8));
-        pushButtonLeft->setText(QApplication::translate("client", "PushButton", 0, QApplication::UnicodeUTF8));
-        pushButtonRight->setText(QApplication::translate("client", "PushButton", 0, QApplication::UnicodeUTF8));
-        pushButtonDown->setText(QApplication::translate("client", "PushButton", 0, QApplication::UnicodeUTF8));
+        pushButtonUp->setText(QApplication::translate("client", "U", 0, QApplication::UnicodeUTF8));
+        pushButtonLeft->setText(QApplication::translate("client", "L", 0, QApplication::UnicodeUTF8));
+        pushButtonRight->setText(QApplication::translate("client", "R", 0, QApplication::UnicodeUTF8));
+        pushButtonDown->setText(QApplication::translate("client", "D", 0, QApplication::UnicodeUTF8));
         pushButtonGetImage_3->setText(QApplication::translate("client", "GetImage", 0, QApplication::UnicodeUTF8));
         pushButtonGetImage->setText(QApplication::translate("client", "Connect", 0, QApplication::UnicodeUTF8));
         pushButtonGetImage_2->setText(QApplication::translate("client", "Disconnect", 0, QApplication::UnicodeUTF8));

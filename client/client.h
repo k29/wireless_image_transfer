@@ -12,6 +12,7 @@
 #include <QMessageBox>
 #include <QHostAddress>
 #include <QDataStream>
+#include <QTimer>
 
 
 namespace Ui {
@@ -45,6 +46,8 @@ public slots:
     void goRight();
     void goDown();
     void goLeft();
+   // void get_image_press();
+    void update();
 
 };
 
