@@ -89,7 +89,7 @@ QImage server::get_image_from_file()
 {
 
     qDebug()<<"getting qimage";
-    return QImage("/home/k29/gor/wireless_image_transfer_2/server/server2/images/test.png");
+    return QImage("images/test.png");
 }
 
 void server::sendImage()
